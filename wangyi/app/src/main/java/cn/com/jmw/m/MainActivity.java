@@ -36,6 +36,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         registerOnlineStatusObserver();
 
+
+
         PushHelper.getInstance().getHuaweiRegisterID(new PushRegisterIdListener() {
             @Override
             public void registerResult(String registerId) {
