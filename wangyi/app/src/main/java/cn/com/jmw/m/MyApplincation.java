@@ -86,7 +86,7 @@ public class MyApplincation extends Application {
             config.vibrate = true;
             config.ledARGB = R.color.color_green_01d9ae;
 
-            config.titleOnlyShowAppName =true;
+            config.titleOnlyShowAppName = true;
             config.notificationEntrance = new MainActivity().getClass();
             NIMClient.updateStatusBarNotificationConfig(config);
         }
