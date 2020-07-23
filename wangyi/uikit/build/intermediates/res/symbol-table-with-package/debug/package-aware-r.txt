@@ -1721,6 +1721,7 @@ drawable image_original_selected
 drawable image_original_selector
 drawable image_preview_choose_selected
 drawable image_preview_choose_selector
+drawable message_plus_tip_normal
 drawable mtrl_dialog_background
 drawable mtrl_dropdown_arrow
 drawable mtrl_ic_arrow_drop_down

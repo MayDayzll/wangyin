@@ -5,7 +5,10 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.TextView;
+
+import com.gyf.immersionbar.ImmersionBar;
 import com.netease.nim.uikit.common.ToastHelper;
 
 import com.netease.nim.uikit.R;
@@ -70,11 +73,13 @@ public class TeamMessageActivity extends BaseMessageActivity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        ImmersionBar.with(this).fullScreen(true).keyboardEnable(true).keyboardMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_RESIZE).statusBarColor(R.color.white).statusBarDarkFont(true).init();
 
         backToClass = (Class<? extends Activity>) getIntent().getSerializableExtra(Extras.EXTRA_BACK_TO_CLASS);
         findViews();
-
+        setTitle("");
         registerTeamUpdateObserver(true);
+
     }
 
     @Override
@@ -117,7 +122,8 @@ public class TeamMessageActivity extends BaseMessageActivity {
         finish();
     }
 
-    /**R
+    /**
+     * R
      * 更新群信息
      *
      * @param d

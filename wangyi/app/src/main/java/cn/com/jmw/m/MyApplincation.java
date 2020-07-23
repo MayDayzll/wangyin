@@ -86,7 +86,7 @@ public class MyApplincation extends Application {
             config.vibrate = true;
             config.ledARGB = R.color.color_green_01d9ae;
 
-            config.titleOnlyShowAppName =true;
+            config.titleOnlyShowAppName = true;
             config.notificationEntrance = new MainActivity().getClass();
             NIMClient.updateStatusBarNotificationConfig(config);
         }
@@ -97,8 +97,8 @@ public class MyApplincation extends Application {
      */
     private LoginInfo getLoginInfo() {
         // TODO: 2020/7/16  读取本地存储的云信账户和token
-        String account = "jmw_33";
-        String token = "a043952d7f42a78fb27fd33aa1c11d00";
+        String account = "jmw_84";
+        String token = "8aee69f4ad8f2546f07657768c808638";
 
         if (!TextUtils.isEmpty(account) && !TextUtils.isEmpty(token)) {
             DemoCache.setAccount(account.toLowerCase());
