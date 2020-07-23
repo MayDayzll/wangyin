@@ -1,0 +1,93 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+    packagingOptions {
+        merge 'res/values/values.xml'
+        merge 'AndroidManifest.xml'
+        merge 'res/drawable/login_bg.xml'
+        merge 'R.txt'
+        merge 'classes.jar'
+    }
+    defaultConfig {
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.appTargetSdkVersion
+        versionCode rootProject.ext.versionCode
+        versionName rootProject.ext.versionName
+
+        renderscriptTargetApi rootProject.ext.compileSdkVersion
+        renderscriptSupportModeEnabled true
+    }
+
+    sourceSets {
+        main {
+            manifest.srcFile 'AndroidManifest.xml'
+            java.srcDirs = ['src']
+            resources.srcDirs = ['src']
+            aidl.srcDirs = ['src']
+            renderscript.srcDirs = ['src']
+            res.srcDirs = ['res', 'res-ptr2', 'res-chatroom']
+            assets.srcDirs = ['assets']
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility rootProject.ext.appSourceCompatibility
+        targetCompatibility rootProject.ext.appTargetCompatibility
+    }
+
+
+    packagingOptions {
+        doNotStrip '*/mips/*.so'
+        doNotStrip '*/mips64/*.so'
+    }
+}
+
+dependencies {
+    api fileTree(dir: 'libs', include: '*.jar')
+    api("androidx.appcompat:appcompat:1.1.0")
+    api("androidx.legacy:legacy-support-v4:${LEGACY_X_VERSION}")
+    api("com.google.android.material:material:1.1.0")
+    api("androidx.constraintlayout:constraintlayout:${CONSTRAINT_X_VERSION}")
+
+//    api 'me.everything:overscroll-decor-android:1.0.4'
+    api "me.leolin:ShortcutBadger:1.1.22@aar"
+
+    api 'com.github.bumptech.glide:glide:4.9.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.9.0'
+    //api 'jp.wasabeef:glide-transformations:3.0.1'
+
+
+    api 'com.github.chrisbanes:PhotoView:2.3.0'
+    api files('libs/fastjson-1.1.71.android.jar')
+    api files('libs/java-json.jar')
+    api files('libs/nim-lucene-7.7.2.jar')
+    api files('libs/nim-superteam-7.7.2.jar')
+    //
+    // 添加依赖。注意，版本号必须一致。
+    // 基础功能 (必需)
+    api 'com.netease.nimlib:basesdk:7.7.2'
+    // 音视频和互动白板服务需要
+    api 'com.netease.nimlib:nrtc:7.7.2'
+    // 音视频需要
+    api 'com.netease.nimlib:avchat:7.7.2'
+    // 聊天室需要
+    api 'com.netease.nimlib:chatroom:7.7.2'
+    // 小米等厂商推送需要
+    api 'com.netease.nimlib:push:7.7.2'
+//    api 'jp.co.cyberagent.android.gpuimage:gpuimage-library:1.4.1' // if you want to use the Glide GPU Filters
+
+    //推送
+    api 'com.huawei.hms:push:4.0.3.301'
+    api files('libs/push/MiPush_SDK_Client_3_7_6.jar')
+    api files('libs/push/vivo_pushsdk-v2.9.0.0.aar')
+    api files('libs/push/com.heytap.msp-push-2.1.0.aar')
+
+    implementation 'com.gyf.immersionbar:immersionbar:3.0.0'
+
+
+
+
+}

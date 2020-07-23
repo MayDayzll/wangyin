@@ -1,0 +1,12 @@
+{
+	"client":{
+		"cp_id":"890086000102028669",
+		"product_id":"9105163812218572736",
+		"client_id":"266364753281025088",
+		"client_secret":"A9F3F0A82B44FE42ED2E7DBFBF4DD8ADD22B6772F3A9B102B0BBFB96AD37C76F",
+		"app_id":"10689203",
+		"package_name":"cn.com.jmw.m",
+		"api_key":"CV7HLoy445Iy4VyzHNfVjagU42ktdH/qAfsES6laK419lsy7lzk8oXaZR0ANIIlaj+50y0YH5nwu1pfI5NK3H5GhdpXx"
+	},
+	"configuration_version":"1.0"
+}

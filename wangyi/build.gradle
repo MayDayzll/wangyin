@@ -1,0 +1,51 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+
+    repositories {
+        google()
+        jcenter()
+        maven {url 'https://developer.huawei.com/repo/'}
+        maven { url 'https://maven.google.com' }
+
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.2.1'
+
+        classpath 'com.huawei.agconnect:agcp:1.3.1.300'
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+        maven { url "https://jitpack.io" }
+        maven { url 'https://developer.huawei.com/repo/' }
+        maven { url 'https://maven.google.com' }
+
+
+    }
+
+
+    ext {
+        compileSdkVersion = 28
+        buildToolsVersion = '29.0.3'
+        minSdkVersion = 19
+        targetSdkVersion = 28
+        appTargetSdkVersion = 28
+        versionCode = 112
+        versionName = '7.7.2'
+        sdkSourceCompatibility = 1.8
+        sdkTargetCompatibility = 1.8
+        appSourceCompatibility = 1.8
+        appTargetCompatibility = 1.8
+        //参考other-sdks 下的版本， 严格按照绑定的NRTC 版本来 ，使用 fetch_nrtc.sh 更新NRTC时会自动修改
+        nosSdkVersion = '1.0.0'
+        reportSdkVersion = '2.0.0'
+    }
+
+}
+
