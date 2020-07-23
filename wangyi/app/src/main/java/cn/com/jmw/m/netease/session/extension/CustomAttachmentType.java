@@ -12,4 +12,5 @@ public interface CustomAttachmentType {
     int RedPacket = 5;
     int OpenedRedPacket = 6;
     int MultiRetweet = 15;//多条消息合并转发
+    int MyOrderCustomMsg = 10002; //自定义消息
 }

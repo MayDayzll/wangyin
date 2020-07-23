@@ -46,9 +46,9 @@ public class DefaultRecentCustomization extends RecentCustomization {
                 }
                 return "[通知提醒]";
             case notification:
-                return TeamNotificationHelper.getTeamNotificationText(recent.getContactId(),
-                        recent.getFromAccount(),
-                        (NotificationAttachment) recent.getAttachment());
+//                return TeamNotificationHelper.getTeamNotificationText(recent.getContactId(),
+//                        recent.getFromAccount(),
+//                        (NotificationAttachment) recent.getAttachment());
             case robot:
                 return "[机器人消息]";
             default:

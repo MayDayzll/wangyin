@@ -231,7 +231,6 @@ public class MessageFragment extends TFragment implements ModuleProxy {
             NIMClient.getService(MsgService.class).sendMessage(message, false).setCallback(new RequestCallback<Void>() {
                 @Override
                 public void onSuccess(Void param) {
-                    Log.e("zll", "param: " );
 
                 }
 
@@ -242,7 +241,6 @@ public class MessageFragment extends TFragment implements ModuleProxy {
 
                 @Override
                 public void onException(Throwable exception) {
-                    Log.e("zll", "onException: "+exception );
 
                 }
             });

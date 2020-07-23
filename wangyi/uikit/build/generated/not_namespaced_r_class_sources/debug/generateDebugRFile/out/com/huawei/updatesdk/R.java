@@ -12,12 +12,12 @@ public final class R {
     public static final class color {
         private color() {}
 
-        public static int emui_color_gray_1 = 0x7f0600a0;
-        public static int emui_color_gray_10 = 0x7f0600a1;
-        public static int emui_color_gray_7 = 0x7f0600a2;
-        public static int upsdk_blue_text_007dff = 0x7f06011e;
-        public static int upsdk_category_button_select_pressed = 0x7f06011f;
-        public static int upsdk_white = 0x7f060120;
+        public static int emui_color_gray_1 = 0x7f0600a1;
+        public static int emui_color_gray_10 = 0x7f0600a2;
+        public static int emui_color_gray_7 = 0x7f0600a3;
+        public static int upsdk_blue_text_007dff = 0x7f06011f;
+        public static int upsdk_category_button_select_pressed = 0x7f060120;
+        public static int upsdk_white = 0x7f060121;
     }
     public static final class dimen {
         private dimen() {}
@@ -31,12 +31,12 @@ public final class R {
     public static final class drawable {
         private drawable() {}
 
-        public static int upsdk_btn_emphasis_normal_layer = 0x7f09017d;
-        public static int upsdk_cancel_bg = 0x7f09017e;
-        public static int upsdk_cancel_normal = 0x7f09017f;
-        public static int upsdk_cancel_pressed_bg = 0x7f090180;
-        public static int upsdk_third_download_bg = 0x7f090181;
-        public static int upsdk_update_all_button = 0x7f090182;
+        public static int upsdk_btn_emphasis_normal_layer = 0x7f09017e;
+        public static int upsdk_cancel_bg = 0x7f09017f;
+        public static int upsdk_cancel_normal = 0x7f090180;
+        public static int upsdk_cancel_pressed_bg = 0x7f090181;
+        public static int upsdk_third_download_bg = 0x7f090182;
+        public static int upsdk_update_all_button = 0x7f090183;
     }
     public static final class id {
         private id() {}
@@ -62,8 +62,8 @@ public final class R {
     public static final class layout {
         private layout() {}
 
-        public static int upsdk_app_dl_progress_dialog = 0x7f0f00e5;
-        public static int upsdk_ota_update_view = 0x7f0f00e6;
+        public static int upsdk_app_dl_progress_dialog = 0x7f0f00e6;
+        public static int upsdk_ota_update_view = 0x7f0f00e7;
     }
     public static final class string {
         private string() {}

@@ -9,6 +9,7 @@
         android:layout_marginRight="7dip"
         android:background="@drawable/nim_bg_message_tip"
         android:gravity="center"
+        android:visibility="gone"
         android:paddingLeft="7dip"
         android:paddingRight="7dip"
         android:textColor="#ffffff"

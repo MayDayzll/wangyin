@@ -4,6 +4,7 @@ import android.content.Context;
 
 import com.netease.nim.uikit.business.session.actions.BaseAction;
 import com.netease.nim.uikit.business.session.activity.P2PMessageActivity;
+import com.netease.nim.uikit.business.session.activity.TeamMessageActivity;
 import com.netease.nim.uikit.dialog.WorkOrderDoalog;
 
 public class messageDialog extends BaseAction {
@@ -20,7 +21,7 @@ public class messageDialog extends BaseAction {
 
     @Override
     public void onClick() {
-        P2PMessageActivity activity = (P2PMessageActivity) getActivity();
+        TeamMessageActivity activity = (TeamMessageActivity) getActivity();
         activity.isEvaluation();
 
     }

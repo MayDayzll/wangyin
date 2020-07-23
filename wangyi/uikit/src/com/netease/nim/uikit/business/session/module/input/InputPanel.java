@@ -25,6 +25,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.netease.nim.uikit.business.session.activity.P2PMessageActivity;
+import com.netease.nim.uikit.business.session.activity.TeamMessageActivity;
 import com.netease.nim.uikit.common.ToastHelper;
 
 import com.alibaba.fastjson.JSONObject;
@@ -734,7 +735,7 @@ public class InputPanel implements IEmoticonSelectedListener, IAudioRecordCallba
 //        time.setBase(SystemClock.elapsedRealtime());
 //        time.start();
 
-        ((P2PMessageActivity) container.activity).isDialogin("2");
+        ((TeamMessageActivity) container.activity).isDialogin("2");
 
     }
 
@@ -746,7 +747,7 @@ public class InputPanel implements IEmoticonSelectedListener, IAudioRecordCallba
 //        time.stop();
 //        time.setBase(SystemClock.elapsedRealtime());
 
-        ((P2PMessageActivity) container.activity).isDialogin("1");
+        ((TeamMessageActivity) container.activity).isDialogin("1");
 
     }
 

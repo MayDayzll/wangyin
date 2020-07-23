@@ -27,10 +27,10 @@ import cn.com.jmw.m.netease.session.extension.StickerAttachment;
  * Created by winnie on 2018/3/19.
  */
 
-public class SessionTeamCustomization extends SessionCustomization{
+public class SessionTeamCustomization extends SessionCustomization {
 
     public interface SessionTeamCustomListener extends Serializable {
-        void initPopupWindow(Context context,View view, String sessionId, SessionTypeEnum sessionTypeEnum);
+        void initPopupWindow(Context context, View view, String sessionId, SessionTypeEnum sessionTypeEnum);
 
         void onSelectedAccountsResult(ArrayList<String> selectedAccounts);
 
@@ -39,35 +39,36 @@ public class SessionTeamCustomization extends SessionCustomization{
 
     private SessionTeamCustomListener sessionTeamCustomListener;
 
+    //标题右边的显示聊天记录和群聊的
     public SessionTeamCustomization(SessionTeamCustomListener listener) {
-        this.sessionTeamCustomListener = listener;
-        // 定制ActionBar右边的按钮，可以加多个
-        ArrayList<SessionCustomization.OptionsButton> optionsButtons = new ArrayList<>();
-        SessionCustomization.OptionsButton cloudMsgButton = new SessionCustomization.OptionsButton() {
-            @Override
-            public void onClick(Context context, View view, String sessionId) {
-                sessionTeamCustomListener.initPopupWindow(context, view, sessionId, SessionTypeEnum.Team);
-            }
-        };
-        cloudMsgButton.iconId = R.drawable.nim_ic_messge_history;
-
-        SessionCustomization.OptionsButton infoButton = new SessionCustomization.OptionsButton() {
-            @Override
-            public void onClick(Context context, View view, String sessionId) {
-                Team team = NimUIKit.getTeamProvider().getTeamById(sessionId);
-                if (team != null && team.isMyTeam()) {
-                    NimUIKit.startTeamInfo(context, sessionId);
-                } else {
-                    ToastHelper.showToast(context, R.string.team_invalid_tip);
-                }
-            }
-        };
-        infoButton.iconId = R.drawable.nim_ic_message_actionbar_team;
-        optionsButtons.add(cloudMsgButton);
-        optionsButtons.add(infoButton);
-
-        buttons = optionsButtons;
-        withSticker = true;
+//        this.sessionTeamCustomListener = listener;
+//        // 定制ActionBar右边的按钮，可以加多个
+//        ArrayList<SessionCustomization.OptionsButton> optionsButtons = new ArrayList<>();
+//        SessionCustomization.OptionsButton cloudMsgButton = new SessionCustomization.OptionsButton() {
+//            @Override
+//            public void onClick(Context context, View view, String sessionId) {
+//                sessionTeamCustomListener.initPopupWindow(context, view, sessionId, SessionTypeEnum.Team);
+//            }
+//        };
+//        cloudMsgButton.iconId = R.drawable.nim_ic_messge_history;
+//
+//        SessionCustomization.OptionsButton infoButton = new SessionCustomization.OptionsButton() {
+//            @Override
+//            public void onClick(Context context, View view, String sessionId) {
+//                Team team = NimUIKit.getTeamProvider().getTeamById(sessionId);
+//                if (team != null && team.isMyTeam()) {
+//                    NimUIKit.startTeamInfo(context, sessionId);
+//                } else {
+//                    ToastHelper.showToast(context, R.string.team_invalid_tip);
+//                }
+//            }
+//        };
+//        infoButton.iconId = R.drawable.nim_ic_message_actionbar_team;
+//        optionsButtons.add(cloudMsgButton);
+//        optionsButtons.add(infoButton);
+//
+//        buttons = optionsButtons;
+//        withSticker = true;
     }
 
     @Override

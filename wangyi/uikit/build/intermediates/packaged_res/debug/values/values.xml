@@ -89,6 +89,7 @@
     <color name="color_1a1a1a">#1a1a1a</color>
     <color name="color_222222">#222222</color>
     <color name="color_333333">#333333</color>
+    <color name="color_40000000">#40000000</color>
     <color name="color_5F83F6">#5F83F6</color>
     <color name="color_5F83F6_alpha_80">#CC5F83F6</color>
     <color name="color_5c88ef">#5c88ef</color>
@@ -673,7 +674,7 @@
     <string name="withdrawn_msg_not_count_notify">撤回(通知不计入未读数)</string>
     <string name="without_content">暂无</string>
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-        <!-- Customize your theme here. -->
+        
         <item name="colorPrimary">@color/white</item>
         <item name="colorPrimaryDark">@color/color_gray_d9d9d9</item>
         <item name="colorAccent">@color/color_blue_0888ff</item>
@@ -699,13 +700,13 @@
         <item name="android:windowSoftInputMode">stateUnspecified|adjustPan</item>
     </style>
     <style name="CustomProgressDialog" parent="@style/CustomDialog">
-        <!-- <item name="android:windowBackground">@drawable/dialog_bg</item> -->
+        
         <item name="android:windowNoTitle">true</item>
         <item name="android:background">@android:color/transparent</item>
         <item name="android:windowBackground">@android:color/transparent</item>
     </style>
     <style name="DarkTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-        <!-- Customize your theme here. -->
+        
         <item name="colorPrimary">@color/color_black_333333</item>
         <item name="colorPrimaryDark">@color/black</item>
         <item name="colorAccent">@color/color_blue_0888ff</item>
@@ -735,7 +736,7 @@
         <item name="colorPrimaryDark">@color/black</item>
     </style>
     <style name="LightBaseTheme" parent="Theme.AppCompat.NoActionBar">
-        <!-- Customize your theme here. -->
+        
         <item name="colorPrimary">@color/white</item>
         <item name="colorPrimaryDark">@color/white_opacity_80</item>
         <item name="colorAccent">@color/color_blue_0888ff</item>
@@ -783,17 +784,17 @@
         <item name="android:background">@drawable/nim_list_item_selector</item>
     </style>
     <style name="dialog" parent="@android:style/Theme.Dialog">
-        <!-- 有无边框 -->
+        
         <item name="android:windowFrame">@null</item>
-        <!-- 是否浮现在activity之上 -->
+        
         <item name="android:windowIsFloating">true</item>
-        <!-- 是否透明 -->
+        
         <item name="android:windowIsTranslucent">true</item>
-        <!-- 背景透明 -->
+        
         <item name="android:windowBackground">#00000000</item>
-        <!-- 模糊 -->
+        
         <item name="android:backgroundDimEnabled">true</item>
-        <!--无标题 -->
+        
         <item name="android:windowNoTitle">true</item>
     </style>
     <style name="dialog_button_text_style">
@@ -837,17 +838,17 @@
     </style>
     <style name="easy_dialog_style" parent="@android:style/Theme.Dialog">
         <item name="android:windowFrame">@null</item>
-        <!-- 边框 -->
+        
         <item name="android:windowIsFloating">true</item>
-        <!-- 是否浮现在activity之上 -->
+        
         <item name="android:windowIsTranslucent">true</item>
-        <!-- 半透明 -->
+        
         <item name="android:windowNoTitle">true</item>
-        <!-- 无标题 -->
+        
         <item name="android:windowBackground">@color/transparent</item>
-        <!-- 背景透明 -->
+        
         <item name="android:backgroundDimEnabled">true</item>
-        <!-- 后面的activity变暗 -->
+        
     </style>
     <style name="edit_text_style">
         <item name="android:textCursorDrawable">@color/black</item>

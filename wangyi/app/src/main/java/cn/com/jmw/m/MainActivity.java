@@ -21,6 +21,10 @@ import com.netease.nimlib.sdk.StatusCode;
 import com.netease.nimlib.sdk.auth.AuthService;
 import com.netease.nimlib.sdk.auth.AuthServiceObserver;
 import com.netease.nimlib.sdk.auth.LoginInfo;
+import com.netease.nimlib.sdk.msg.MessageBuilder;
+import com.netease.nimlib.sdk.msg.MsgService;
+import com.netease.nimlib.sdk.msg.constant.SessionTypeEnum;
+import com.netease.nimlib.sdk.msg.model.IMMessage;
 
 import cn.com.jmw.m.netease.DemoCache;
 import cn.com.jmw.m.netease.session.SessionHelper;
@@ -87,7 +91,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 loginImAccount(account, token);
                 break;
             case R.id.loginOutBtn:
-                logoutIm(this);
+//                logoutIm(this);
+                MyOrderAttachment myOrderAttachment = new MyOrderAttachment();
+                myOrderAttachment.setTitle("五月天最帅");
+                IMMessage stickerMessage = MessageBuilder.createCustomMessage("2859179205", SessionTypeEnum.Team, "sadal", myOrderAttachment);
+                NIMClient.getService(MsgService.class).sendMessage(stickerMessage,false);
+//                NIMClient.getService(MsgService.class).saveMessageToLocal(
                 break;
             case R.id.bt:
                 SessionHelper.startTeamSession(this,"2859179205");

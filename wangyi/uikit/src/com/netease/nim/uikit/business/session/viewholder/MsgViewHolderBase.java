@@ -33,6 +33,7 @@ import com.netease.nimlib.sdk.msg.constant.SessionTypeEnum;
 import com.netease.nimlib.sdk.msg.model.IMMessage;
 
 /**
+ * 聊天界面的控制
  * 会话窗口消息列表项的ViewHolder基类，负责每个消息项的外层框架，包括头像，昵称，发送/接收进度条，重发按钮等。<br>
  * 具体的消息展示项可继承该基类，然后完成具体消息内容展示即可。
  */
@@ -230,9 +231,13 @@ public abstract class MsgViewHolderBase extends RecyclerViewHolder<BaseMultiItem
     protected final void refresh() {
         //如果是avchat类消息，先根据附件的from字段重置消息的方向和发送者ID
         MessageHelper.adjustAVChatMsgDirect(message);
+        //聊天头像设置
         setHeadImageView();
+        //显示聊天名称设置
         setNameTextView();
+        //显示时间设置
         setTimeTextView();
+        //设置消息发送状态
         setStatus();
         setOnClickListener();
         setLongClickListener();
@@ -285,6 +290,7 @@ public abstract class MsgViewHolderBase extends RecyclerViewHolder<BaseMultiItem
         }
     }
 
+    //聊天显示的头像
     private void setHeadImageView() {
         HeadImageView show = isReceivedMessage() ? avatarLeft : avatarRight;
         HeadImageView hide = isReceivedMessage() ? avatarRight : avatarLeft;
@@ -390,12 +396,13 @@ public abstract class MsgViewHolderBase extends RecyclerViewHolder<BaseMultiItem
         }
     }
 
+    //设置群里显示名称的控件
     private void setNameTextView() {
         if (!shouldDisplayNick()) {
             nameTextView.setVisibility(View.GONE);
             return;
         }
-        nameTextView.setVisibility(View.VISIBLE);
+        nameTextView.setVisibility(View.GONE);
         nameTextView.setText(getNameText());
     }
 

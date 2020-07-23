@@ -10,7 +10,7 @@ public abstract class CustomAttachment implements MsgAttachment {
 
     protected int type;
 
-    CustomAttachment(int type) {
+    public CustomAttachment(int type) {
         this.type = type;
     }
 

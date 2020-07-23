@@ -5,6 +5,8 @@ import com.alibaba.fastjson.JSONObject;
 import com.netease.nimlib.sdk.msg.attachment.MsgAttachment;
 import com.netease.nimlib.sdk.msg.attachment.MsgAttachmentParser;
 
+import cn.com.jmw.m.MyOrderAttachment;
+
 /**
  * Created by zhoujianghua on 2015/4/9.
  */
@@ -28,6 +30,9 @@ public class CustomAttachParser implements MsgAttachmentParser {
 //                    return new SnapChatAttachment(data);
                 case CustomAttachmentType.Sticker:
 //                    attachment = new StickerAttachment();
+                    break;
+                case CustomAttachmentType.MyOrderCustomMsg:
+                    attachment = new MyOrderAttachment();
                     break;
                 case CustomAttachmentType.RTS:
 //                    attachment = new RTSAttachment();

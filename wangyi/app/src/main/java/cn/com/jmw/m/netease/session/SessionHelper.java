@@ -44,6 +44,8 @@ import com.netease.nimlib.sdk.team.model.Team;
 import java.util.ArrayList;
 import java.util.List;
 
+import cn.com.jmw.m.MsgViewHolderMyOrder;
+import cn.com.jmw.m.MyOrderAttachment;
 import cn.com.jmw.m.R;
 import cn.com.jmw.m.netease.DemoCache;
 import cn.com.jmw.m.netease.SessionTeamCustomization;
@@ -378,7 +380,7 @@ public class SessionHelper {
 //            if (NIMRedPacketClient.isEnable()) {
 //                actions.add(new RedPacketAction());
 //            }
-            actions.add(new TipAction());
+//            actions.add(new TipAction());
             SessionTeamCustomization.SessionTeamCustomListener listener = new SessionTeamCustomization.SessionTeamCustomListener() {
 
                 @Override
@@ -397,6 +399,7 @@ public class SessionHelper {
 //                    avChatAction.onSelectedAccountFail();
                 }
             };
+            //去除查看群消息和聊天记录
             normalTeamCustomization = new SessionTeamCustomization(listener) {
 
                 @Override
@@ -418,7 +421,7 @@ public class SessionHelper {
 //            if (NIMRedPacketClient.isEnable()) {
 //                actions.add(new RedPacketAction());
 //            }
-            actions.add(new TipAction());
+//            actions.add(new TipAction());
             SessionTeamCustomization.SessionTeamCustomListener listener = new SessionTeamCustomization.SessionTeamCustomListener() {
 
                 @Override
@@ -464,6 +467,9 @@ public class SessionHelper {
 //        NimUIKit.registerMsgItemViewHolder(GuessAttachment.class, MsgViewHolderGuess.class);
         NimUIKit.registerMsgItemViewHolder(CustomAttachment.class, MsgViewHolderDefCustom.class);
         NimUIKit.registerMsgItemViewHolder(StickerAttachment.class, MsgViewHolderSticker.class);
+
+        NimUIKit.registerMsgItemViewHolder(MyOrderAttachment.class, MsgViewHolderMyOrder.class);
+
 //        NimUIKit.registerMsgItemViewHolder(SnapChatAttachment.class, MsgViewHolderSnapChat.class);
 //        NimUIKit.registerMsgItemViewHolder(RTSAttachment.class, MsgViewHolderRTS.class);
 //        NimUIKit.registerMsgItemViewHolder(MultiRetweetAttachment.class, MsgViewHolderMultiRetweet.class);

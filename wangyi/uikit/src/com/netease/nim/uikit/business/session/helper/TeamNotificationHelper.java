@@ -21,6 +21,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
+ * 提示加入群
  * 系统消息描述文本构造器。主要是将各个系统消息转换为显示的文本内容。<br>
  * Created by huangjun on 2015/3/11.
  */
@@ -34,7 +35,7 @@ public class TeamNotificationHelper {
             content += "[" + messageTip + "]";
         } else {
             if (message.getSessionType() == SessionTypeEnum.Team && message.getAttachment() != null) {
-                content += getTeamNotificationText(message, message.getSessionId());
+//                content += getTeamNotificationText(message, message.getSessionId());
             } else {
                 content += message.getContent();
             }

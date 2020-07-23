@@ -818,6 +818,7 @@ color checkbox_themeable_attribute_color
 color color_1a1a1a
 color color_222222
 color color_333333
+color color_40000000
 color color_5F83F6
 color color_5F83F6_alpha_80
 color color_5c88ef
@@ -1666,6 +1667,7 @@ drawable abc_textfield_search_material
 drawable abc_vector_test
 drawable avd_hide_password
 drawable avd_show_password
+drawable banyuan
 drawable blue_round_box_4
 drawable blue_stroke_box_4
 drawable btn_checkbox_checked_mtrl
@@ -2675,6 +2677,7 @@ layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
 layout hms_download_progress
+layout layout_message
 layout layout_workorder
 layout mtrl_alert_dialog
 layout mtrl_alert_dialog_actions

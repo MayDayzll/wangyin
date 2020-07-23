@@ -39,8 +39,6 @@ public abstract class UI extends AppCompatActivity {
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        LogUtil.ui("activity: " + getClass().getSimpleName() + " onCreate()");
     }
 
     @Override
@@ -76,7 +74,6 @@ public abstract class UI extends AppCompatActivity {
     }
 
     public void setToolBar(int toolBarId, ToolBarOptions options) {
-        Log.e("zll", "setToolBar: "+options.toString() );
         toolbar = findViewById(toolBarId);
         if (options.titleId != 0) {
             toolbar.setTitle("");
@@ -130,7 +127,6 @@ public abstract class UI extends AppCompatActivity {
         if (toolbar != null) {
             toolbar.setTitle("");
             toolbar.setLogo(null);
-            Log.e("zll", "setTitle: "+title );
         }
     }
 

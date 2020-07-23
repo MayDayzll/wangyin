@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.gyf.immersionbar.ImmersionBar;
@@ -24,6 +25,7 @@ import com.netease.nim.uikit.business.session.fragment.MessageFragment;
 import com.netease.nim.uikit.business.session.fragment.TeamMessageFragment;
 import com.netease.nim.uikit.common.ToastHelper;
 import com.netease.nim.uikit.common.activity.ToolBarOptions;
+import com.netease.nim.uikit.dialog.CommentDialog;
 import com.netease.nimlib.sdk.msg.constant.SessionTypeEnum;
 import com.netease.nimlib.sdk.msg.model.IMMessage;
 import com.netease.nimlib.sdk.team.constant.TeamTypeEnum;
@@ -49,6 +51,7 @@ public class TeamMessageActivity extends BaseMessageActivity {
     private TeamMessageFragment fragment;
 
     private Class<? extends Activity> backToClass;
+    private RelativeLayout mRlRecording;
 
     public static void start(Context context, String tid, SessionCustomization customization,
                              Class<? extends Activity> backToClass, IMMessage anchor) {
@@ -78,6 +81,7 @@ public class TeamMessageActivity extends BaseMessageActivity {
         backToClass = (Class<? extends Activity>) getIntent().getSerializableExtra(Extras.EXTRA_BACK_TO_CLASS);
         findViews();
         setTitle("");
+        mRlRecording = findViewById(R.id.mRlRecording);
         registerTeamUpdateObserver(true);
 
     }
@@ -257,4 +261,25 @@ public class TeamMessageActivity extends BaseMessageActivity {
             finish();
         }
     }
+
+
+    public void isDialogin(String type) {
+        if ("1".equals(type)) {
+            mRlRecording.setVisibility(View.GONE);
+            ImmersionBar.with(this).fullScreen(true).keyboardEnable(true).keyboardMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_RESIZE).statusBarColor(R.color.white).statusBarDarkFont(true).init();
+
+        } else {
+            mRlRecording.setVisibility(View.VISIBLE);
+            ImmersionBar.with(this).fullScreen(true).keyboardEnable(true).keyboardMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_RESIZE).statusBarColor(R.color.color_40000000).statusBarDarkFont(true).init();
+
+        }
+    }
+
+    public void isEvaluation() {
+        CommentDialog commentDialog = new CommentDialog(this);
+        commentDialog.show();
+
+    }
 }
+
+

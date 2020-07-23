@@ -43,7 +43,6 @@ import java.util.Set;
 public class P2PMessageActivity extends BaseMessageActivity {
 
     private boolean isResume = false;
-    private RelativeLayout mRlRecording;
 
     public static void start(Context context, String contactId, SessionCustomization customization, IMMessage anchor) {
         Intent intent = new Intent();
@@ -67,7 +66,6 @@ public class P2PMessageActivity extends BaseMessageActivity {
         requestBuddyInfo();
         displayOnlineState();
         registerObservers(true);
-        mRlRecording = findViewById(R.id.mRlRecording);
         ImmersionBar.with(this).fullScreen(true).keyboardEnable(true).keyboardMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_RESIZE).statusBarColor(R.color.white).statusBarDarkFont(true).init();
 
     }
@@ -227,24 +225,10 @@ public class P2PMessageActivity extends BaseMessageActivity {
     }
 
 
-    public void isDialogin(String type) {
-        if ("1".equals(type)) {
-            mRlRecording.setVisibility(View.GONE);
-            ImmersionBar.with(this).fullScreen(true).keyboardEnable(true).keyboardMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_RESIZE).statusBarColor(R.color.white).statusBarDarkFont(true).init();
-
-        } else {
-            mRlRecording.setVisibility(View.VISIBLE);
-            ImmersionBar.with(this).fullScreen(true).keyboardEnable(true).keyboardMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_RESIZE).statusBarColor(R.color.color_70000000).statusBarDarkFont(true).init();
-
-        }
-    }
 
 
-    public void isEvaluation() {
-        CommentDialog commentDialog = new CommentDialog(this);
-        commentDialog.show();
 
-    }
+
 
 
 }

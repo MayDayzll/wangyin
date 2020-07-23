@@ -44,8 +44,6 @@ public class MyApplincation extends Application {
          * 理论上，core进程的Application#onCreate()（还有Application的其他方法）只能做与im sdk 相关的工作
          */
         initIM();
-
-
     }
 
 
