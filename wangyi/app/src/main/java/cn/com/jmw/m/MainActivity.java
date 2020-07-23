@@ -80,15 +80,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             default:
                 break;
             case R.id.loginBtn:
-                String account = "jmw_33";
-                String token = "a043952d7f42a78fb27fd33aa1c11d00";
+                String account = "jmw_84";
+                String token = "8aee69f4ad8f2546f07657768c808638";
                 loginImAccount(account, token);
                 break;
             case R.id.loginOutBtn:
                 logoutIm(this);
                 break;
             case R.id.bt:
-                SessionHelper.startP2PSession(this, "jmw_12345");
+                SessionHelper.startTeamSession(this,"2859179205");
+//                SessionHelper.startP2PSession(this, "jmw_12345");
                 break;
         }
     }
